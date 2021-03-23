@@ -1,0 +1,71 @@
+<html>
+<body>
+    <style>
+    style2 {display: inline;}</style>
+    <style>
+    style1 {
+    background: #FF0000;
+    color: white;}
+    </style>    
+    Monitor scale: <p id = "1"></p>
+    Browser scale: <p id ="2"></p>
+    <style2>User Language: <p id = "3"></p></style2>
+    Browser code: <p id = "4"></p>
+    Browser version: <p id = "5"></p>
+    Browser name: <p id = "6"></p>
+    Browser cookies: <p id = "7"></p>
+    User platform: <p id = "8"></p>
+    Browser Java script enabled: <p id = "9"></p>
+    User Agent: <p id = "10"></p>
+    IP adrress: {{remote_address}};      
+    <p align = 'center'><a href= "page1">
+    <style1><font> Return to previous page <br/><font></a></style1>
+</p>
+<script>
+    const screenWidth = screen.width;
+    const screenHeight = screen.height;
+    var result = screenWidth + "X" + screenHeight; 
+    monitorScale = document.getElementById('1');
+    monitorScale.innerHTML = result;
+
+    var userLang = navigator.language || navigator.userLanguage; 
+    var userLangR = document.getElementById('3');
+    userLangR.innerHTML = userLang;
+
+    const windowOuterWidth = window.outerWidth;
+    const windowOuterHeight = window.outerHeight;
+    var result2 = windowOuterWidth + "X" + windowOuterHeight;
+    browserScale = document.getElementById('2');
+    browserScale.innerHTML = result2;
+
+    var browserName = navigator.appName;
+    browserNameR = document.getElementById('4');
+    browserNameR.innerHTML = browserName;
+
+    var vers = navigator.appVersion;
+    browserVers = document.getElementById('5');
+    browserVers.innerHTML = vers;
+    
+    var code = navigator.appCodeName;
+    browserCode = document.getElementById('6');
+    browserCode.innerHTML = code;
+
+    var cook = navigator.cookieEnabled;
+    browserCookies = document.getElementById('7');
+    browserCookies.innerHTML = cook;
+
+    var platform = navigator.platform;
+    userPlatform = document.getElementById('8');
+    userPlatform.innerHTML = platform;
+    
+    var je = navigator.javaEnabled();
+    browserJavaEn = document.getElementById('9');
+    browserJavaEn.innerHTML = je;
+
+    var ua = navigator.userAgent;
+    userAgent = document.getElementById('10');
+    userAgent.innerHTML = ua;
+
+</script>
+</body>
+</html>
